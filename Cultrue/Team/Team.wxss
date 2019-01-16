@@ -1,0 +1,56 @@
+/* Cultrue/Team/Team.wxss */
+page{
+  background-color: #fff;
+}
+.z-img{
+  width: 320rpx;
+
+}
+.outer{
+  margin-bottom:20rpx;
+}
+.left{
+  background-color: #3f3f3f;
+  color:#fff;
+  flex: 1;
+  -webkit-flex: 1;
+}
+.left-top{
+  font-size: 30rpx;
+}
+.left-btn{
+  font-size: 26rpx;
+    margin-top: 30rpx;
+}
+.left-top,.left-btn{
+  margin-left: 40rpx;
+}
+.text{
+  font-size: 37rpx;
+}
+/*  */
+.img-all{
+  width: 50%;
+float: left;
+margin-bottom:50rpx;
+}
+.img{
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  color: white;
+}
+.DOUjiu{
+  font-size: 40rpx;
+  width: 120rpx;
+}
+.huisea{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 1, 0.2);
+  border-radius: 10rpx;
+}
+.pinglun{
+padding-top: 30rpx;
+}

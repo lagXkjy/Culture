@@ -1,0 +1,14 @@
+<!--pages/shouru/shouru.wxml-->
+<view class='ZanWu' wx:if="{{list.length<=0}}">暂无数据</view>
+<view wx:for="{{list}}" class='flex'>
+  <view>
+    <view class='top'>{{item.title}}</view>
+    <view class='bto'>{{item.time}}</view>
+  </view>
+  <view wx:if="{{item.ISadd}}" class='green  size'>
+    +{{item.money}}
+  </view>
+  <view wx:else class='red  size'>
+    -{{item.money}}
+  </view>
+</view>

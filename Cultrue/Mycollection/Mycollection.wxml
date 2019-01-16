@@ -1,0 +1,37 @@
+<!--Cultrue/Mycollection/Mycollection.wxml-->
+<view style='height:20rpx;'></view>
+<view >
+
+<view class='outer'>
+  <view wx:for="{{list}}" class='flex content'>
+    <view bindtap='select' data-index='{{item.index}}' class='center xuanze'>
+        <icon wx:if='{{item.show}}' type="success" size="18" color="#ff5a5f"/> 
+        <view wx:else class='yuan'></view>
+    </view>
+    <view bindtap='Speacl' data-id='{{item.ID}}' class='content-all'>
+        <view class='fon-32'>{{item.Title}}</view>
+        <view class='fon-26 XianZhi'>{{item.FirstField}}</view>
+        <view class='fon-24'>文/{{item.Writer}}</view>
+    </view>
+    <view bindtap='Speacl' data-id='{{item.ID}}' class='centerH'>
+      <image class='imgall' mode='center' src='{{url}}{{item.ListImg}}'></image>
+    </view>
+  </view>
+</view>
+<view  wx:if="{{!ZanWu}}" class='footer flex'>
+  <view class='yixuanze'>
+    已选择<text id='bian'>{{sum}}</text>个内容
+  </view>
+  <view bindtap='Remove' class='shanchu fon-32'>
+    删除
+  </view>
+</view>
+
+<view wx:if="{{JiaShow}}" class='center JiaZaiZ'>
+  <image class='img-oo'  src='../../images/5-121204193R0-50.gif'></image>
+   加载中
+</view>
+</view>
+<view wx:if="{{All}}" class='center JiaZaiZ'>已经加载全部了</view>
+
+<view wx:if="{{ZanWu}}" class='center JiaZaiZ'>暂无收藏</view>

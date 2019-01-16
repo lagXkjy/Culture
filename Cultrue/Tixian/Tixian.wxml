@@ -1,0 +1,19 @@
+<!--pages/Tixian/Tixian.wxml-->
+<form bindsubmit="formSubmit">
+<view class='outer'>
+  <view class='jiner'>
+    提现金额
+  </view>
+  <view class='flex'>
+    <view  class='qianB'>¥</view><input bindinput="changemoney" focus="{{true}}" name="mony" class='input'></input>
+  </view>
+  <view class='beiZhu'>
+    <view>备注</view>    <input placeholder-class='beihzua'  placeholder='填写备注' name="beizhu" class='input2'></input>
+  </view>
+  <view class='tishi'>
+    预计T+7工作日到账，可提现金额¥<text class='fon-30'>{{CanUse}}.00</text>  .
+  </view>
+  <button formType="submit" class='fon-36 bg-hongse white'>提现</button>
+  <view bindtap='ShouRu' class='footer'>收入明细</view>
+</view>
+</form>

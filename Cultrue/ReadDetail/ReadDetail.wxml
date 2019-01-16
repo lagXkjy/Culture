@@ -1,0 +1,201 @@
+<!--Cultrue/ReadDetail/ReadDetail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class='outer'>
+  <view>
+    <swiper indicator-dots="{{true}}"  indicator-active-color="#fff" autoplay="{{true}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{url}}{{item}}" mode='widthFix' class="slide-image"/>
+          </swiper-item>
+        </block>
+    </swiper>
+  </view>
+
+  <view class='middle'>
+      <view class='fon-48 XianZhi'>{{LIST.Article.Title}}</view>
+      <view class='flex middle-two centerH'>
+        <view class='Bb8687 fon-30'>{{LIST.Article.publishTime}}</view>
+        <!--  -->
+        <view bindtap='DianZan'>
+          <image wx:if="{{LIST.IsMyLike==0}}" mode='widthFix'class='img' src='../../images/dianzan_03.png'></image>
+          <image wx:if="{{LIST.IsMyLike==1}}" mode='widthFix' class='img' src='../../images/dianzan_04.png'></image>
+        </view>
+        <view class='Bb8687 fon-30'>{{LIST.LikeNum}}</view>
+        <!--  -->
+        <view bindtap='ShouCang'>
+          <image wx:if="{{LIST.IsMyCollect==0}}" mode='widthFix'class='img'src='../../images/xing_03.png'></image>
+          <image  wx:if="{{LIST.IsMyCollect==1}}" mode='widthFix' class='img' src='../../images/xing_04.png'></image>
+        </view>
+        <view class='Bb8687 fon-30'>{{LIST.CollectNum}}</view>
+        <!--  -->
+      </view>
+      <view class='flex middle-three centerH '>
+        <view class='centerH'><image class='images' src='{{LIST.Author.headimgurl}}'></image></view>
+        <view class='fon-30'>文/{{LIST.Author.AuthorName}}</view>
+        <view wx:if="{{LIST.ABC!=null}}" class='centerH'><image  class='images'mode='widthFix' src='{{url}}{{LIST.ABC.headimgurl}}'></image></view>
+        <view wx:if="{{LIST.ABC!=null}}" class='fon-30'>朗诵/{{LIST.ABC.AuthorName}}</view>
+      </view>
+    </view>
+    <!-- <audio class='audioa' poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>  -->
+    <view wx:if="{{LIST.Article.VoiceFile!=''}}" class='audio'style="background:url({{url}}{{LIST.Article.VoiceImg}}) no-repeat;background-size:100% 100%" >
+       <view  class='bg-mohu center'>
+           <view  hidden='{{push}}'  class="m-progress">
+              <view class='mprog'>
+              <view class='projuss' bindtouchstart="drawStart" bindtouchmove="drawMove"  bindtouchend="drawEnd">
+              <progress  backgroundColor="rgba(255,255,255,0.5)" percent="{{ musicPg }}" color="white" stroke-width="3" class="progress"/> </view>
+               <view class='BtnCen'>
+                 <text style="font-size: 12px;color:#fff" class="left">{{cpTime}}</text>
+                  <text style="font-size: 12px;color:#fff" class="right">{{duration}}</text>
+               </view>
+              </view>
+           </view>
+           <image  class='bgimgb' mode='widthFix'  src="../../images/{{ status === 'pause' ? 'pause':'play'}}.png"  bindtap="clickPlay"/>
+       </view>
+    </view>
+<!--内容  -->
+    <view class='content fon-32'>
+        <view class='bn-hou'>
+       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        <view class='fon-30 zuozhe'>责编：{{LIST.Article.Editor}}  制作：{{LIST.Article.Fabrication }}  {{LIST.Article.CodeNum}}字</view>
+      </view>
+      </view>
+      <!--作者  -->
+      <view class='author'>
+        <view class='flex author-top'>
+          <view><image class='imgs'  src='{{LIST.Author.headimgurl}}'></image></view>
+          <view class='authorcon'>
+            <view class='fon-38 '>作者：{{LIST.Author.AuthorName}}</view>
+            <view class='fon-26 XianZhiTh AllHui'>{{LIST.Author.Description}}</view>
+          </view>
+        </view>
+        <!--作品  -->
+        <view wx:if="{{LIST.works.length>0}}"  class='fon-40 gaodu'>
+          获奖作品
+        </view>
+  <!-- 循环开始 -->
+        
+        <view bindtap='QUKanJiang' data-id='{{item.ID}}' wx:for="{{LIST.works}}">
+          <view wx:if="{{index<2}}" class='flex xianspea'>
+              <view>
+                  <image class='kahouimg' mode='center' src='{{url}}{{item.ListImg}}'></image>
+              </view>
+              <view class='center-kao'>
+                  <view class='fon-32'>{{item.Title}}</view>
+                  <view class='fon-26 AllHui XianZhi center-kaoa'>{{item.FirstField}}</view>
+                  <view class='fon-26 AllHui'>文/{{item.Writer}}</view>
+              </view>
+          </view>
+          <view bindtap='QUKanJiang' data-id='{{item.ID}}' hidden='{{ISWork}}' wx:if="{{index>=2}}" class='flex xianspea'>
+              <view>
+                  <image class='kahouimg' mode='center' src='{{url}}{{item.ListImg}}'></image>
+              </view>
+              <view class='center-kao'>
+                  <view class='fon-32'>{{item.Title}}</view>
+                  <view class='fon-26 AllHui XianZhi center-kaoa'>{{item.FirstField}}</view>
+                  <view class='fon-26 AllHui'>文/{{item.Writer}}</view>
+              </view>
+          </view>
+        </view>
+    <!-- 结束 -->
+      <view wx:if="{{LIST.works.length>0}}">
+        <view hidden='{{!ISWork}}' bindtap='ISWork' class='fon-26 moreduo'>点击查看更多</view>
+        <view hidden='{{ISWork}}' bindtap='ISWork' class='fon-26 moreduo'>已展开全部</view>
+      </view>
+        
+      <!--  -->
+      <view wx:if="{{LIST.ABC!=null}}" class='flex  author-top'>
+          <view><image class='imgs' mode='widthFix' src='{{url}}{{LIST.ABC.headimgurl}}'></image></view>
+          <view class='authorcon'>
+            <view class='fon-38 '>朗诵者：{{LIST.ABC.AuthorName}}</view>
+            <view class='fon-26 XianZhiTh AllHui'>{{LIST.ABC.Description}}</view>
+          </view>
+        </view>
+        <!--ji\\  -->
+        <view class='flex ganbaei'>
+          <view class='fon-32 gulia'>鼓励：</view>
+          <view class=' fon-30 money'>
+            <view bindtap='showModel'>为你干杯</view>
+            <view bindtap='ZhiFu' data-id='{{index}}' wx:for="{{moey}}">{{item.yuan}}元</view>
+          </view>
+        </view>
+        <!--  -->
+        <!-- 最新评论 -->
+        <view  class='BtnCen ZuiXIn '>
+          <view class='fon-40'>最新评论</view>
+          <!-- <view class='flex centerH ZUiXInX'>
+            <view bindtap='DianZan' class='centerH'>
+            <image wx:if="{{ZAN}}" mode='widthFix' class='imgAx' src='../../images/dianzan_03.png'></image>
+            <image wx:else  mode='widthFix' class='imgAx' src='../../images/dianzan_04.png'></image>
+            </view>
+            <view class='fon-26 Bb8687'>{{LIST.LikeNum}}</view>
+            <view  bindtap='ShouCang' class='centerH'>
+            <image wx:if="{{LIST.IsMyCollect==0}}" mode='widthFix' class='imgAx' src='../../images/xing_03.png'></image>
+            <image  wx:if="{{LIST.IsMyCollect==1}}" mode='widthFix' class='imgAx' src='../../images/xing_04.png'></image>
+            </view>
+            <view class='fon-26 Bb8687'>{{LIST.CollectNum}}</view>
+            <view class='centerH'><image mode='widthFix' class='imgAx' src='../../images/pinglun_06.png'></image></view>
+            <view class='fon-26 Bb8687'>{{sunall+2}}</view>
+          </view> -->
+        </view>
+        <!--最新评论完  -->
+        <!--评论详情开始  -->
+        <view wx:for="{{LIST.UserComment}}">
+          <view wx:if="{{index<2}}" class='flex zuixingpinglun'>
+            <view><image mode='widthFix' class='img-wan' src='{{item.headimgurl}}'></image></view>
+            <view class='zuixin-r'>
+              <view class='fon-26 b4b4'>{{item.NickName}}</view>
+              <view class='fon-26 AllHui timezui'>{{item.CreateTime}}</view>
+              <view class='fon-30 XianZhione'>{{item.Commont}}</view>
+            </view>
+          </view>
+        
+         <view hidden='{{ISLun}}' wx:if="{{index>=2}}" class='flex zuixingpinglun'>
+            <view><image mode='widthFix' class='img-wan' src='{{item.headimgurl}}'></image></view>
+            <view class='zuixin-r'>
+              <view class='fon-26 b4b4'>{{item.NickName}}</view>
+              <view class='fon-26 AllHui timezui'>{{item.CreateTime}}</view>
+              <view class='fon-30 XianZhione'>{{item.Commont}}</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+        <!--评论详情完  -->
+        <view wx:if="{{XianShi}}">
+          <view hidden='{{!ISLun}}' bindtap='ISLun' class='fon-26 footer-last'>查看余下{{sunall}}条评价</view>
+          <view hidden='{{ISLun}}' bindtap='ISLun' class='fon-26 footer-last'>已展开全部</view>
+        </view>
+          <view wx:else>
+            <view class='fon-26 footer-last'>本作品暂无评论哦！</view>
+        </view>
+</view>
+
+
+
+<view hidden='{{showmodel}}' class='speal-model'>
+  <view class='motaikuana'>
+      <view bindtap='closeModel' class='fon-30 top-mo '>
+       为你干杯
+        <image  mode='widthFix' class='imghiden' src='../../images/hidden_03.png'></image>
+      </view>
+        <view class='padding'>
+          <view class='color-4 fon-32'>您可以通过购买红酒的方式对作者进行鼓励！您既鼓励了您喜欢的作者，又品尝到了美味的红酒！</view>
+      <view class='color-4  fon-32'> “九杯酒”是在场主义散文奖的长期赞助商，通过“为您干杯”销售的每一瓶红酒，“九杯酒”将拿出3元支付给微散文平台，支持平台建设；拿出7元给文章作者，以资鼓励！</view>
+        </view>
+        <button bindtap='newGong' class='button'>点击进入酒杯酒</button>
+  </view>
+  
+</view>
+
+<form>
+  <view class='footer bg-fff'>
+    <view class=' centerH dingwei flex'>
+     
+        <image class='write' src='../../images/write_15.png' mode='widthFix'></image>
+      
+      <input bindinput="inputValue" maxlength='2000' value='{{value}}' name="content" type='text' placeholder-class='footer-pin fon-28' placeholder='写评论'></input>
+      <text bindtap='submit'  class='fasong footer-pin fon-28'>发送</text>
+    </view>
+  </view>
+</form>
+<loading hidden="{{hidden}}">加载中...</loading>

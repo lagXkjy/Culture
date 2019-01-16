@@ -1,0 +1,133 @@
+/**app.wxss**/
+
+/*颜色通用  */
+
+page{
+  background-color: #f0f2f5;
+  height: 100%;
+  font-family: "黑体";
+  box-sizing: border-box;
+}
+
+.bg-fff{
+  background-color: #fff;
+}
+.AllHui{
+  color:#888;
+}
+.contentColor{
+  color:#4e4e4e;
+}
+.b4b4{
+  color:#4b4b4b;
+}
+.white{
+  color:#fff;
+}
+.Q7777{
+  color: #777777;
+}
+.bbb{
+  color:#bbb;
+}
+.Bb8687{
+  color:#8b8687;
+}
+
+/*通用结构  */
+.flex{
+  display: flex;
+  display: -webkit-flex;
+  
+}
+.borderBbottom{
+  border-bottom: 1px solid #e3e3e3;
+}
+.between{
+   justify-content: space-between;
+   -webkit-justify-content: space-between;
+}
+.XianZhiTh{
+  word-wrap:break-word;
+  overflow:hidden;
+  -webkit-line-clamp:3;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+.XianZhi{
+  word-wrap:break-word;
+  overflow:hidden;
+  -webkit-line-clamp:2;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+.XianZhione{
+  word-wrap:break-word;
+  overflow:hidden;
+  -webkit-line-clamp:1;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+}
+.center{
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -webkit-flex;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.centerH{
+  align-items: center;
+  -webkit-align-items: center;
+  display: flex;
+    display: -webkit-flex;
+}
+.BtnCen{
+  align-items: center;
+  -webkit-align-items: center;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+    -webkit-justify-content:  space-between;
+}
+/*字体通用  */
+.fon-32{
+  font-size: 32rpx;
+}
+.fon-40{
+  font-size: 40rpx;
+}
+.fon-28{
+  font-size: 28rpx;
+}
+.fon-26{
+  font-size: 26rpx;
+}
+.fon-24{
+  font-size: 24rpx;
+}
+.fon-36{
+  font-size: 36rpx;
+}
+.fon-30{
+  font-size: 30rpx;
+}
+.fon-48{
+  font-size: 48rpx;
+}
+.JiaZaiZ{
+  font-size: 25rpx;
+  color:#8b8687;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.ZanWu{
+  text-align: center;
+  font-size: 25rpx;
+  color: #8b8687;
+}
+.img-oo{
+  width: 35rpx;
+  height: 35rpx;
+}

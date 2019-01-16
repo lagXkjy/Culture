@@ -1,0 +1,31 @@
+/* pages/shouru/shouru.wxss */
+.flex{
+  display: flex;
+  padding:35rpx 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+}
+.top{
+  font-size: 36rpx;
+  width: 450rpx;
+  margin-bottom: 15rpx;
+}
+.bto{
+  font-size: 26rpx;
+   color: #b2b2b2;
+}
+.yanse{
+  
+  color:#4e4;
+}
+.size{
+font-size: 50rpx;
+}
+.green{
+  color:#18787f;
+}
+.red{
+  color:#ff696e;
+}

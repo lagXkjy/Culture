@@ -1,0 +1,100 @@
+/* Cultrue/Eventdetails/Eventdetails.wxss */
+@import "../../wxParse/wxParse.wxss";
+page{
+  background-color: #fff;
+ padding-bottom: 20rpx;
+}
+.outer{
+ padding:32rpx 35rpx;
+}
+.img-top{
+  width: 100%;
+}
+.content{
+  padding: 50rpx 0;
+  border-bottom: 1px solid #ccc;
+  line-height: 50rpx;
+}
+.toxiang{
+  width: 143rpx;
+  border-radius: 50%;
+  height: 143rpx;
+}
+.centerall{
+  text-align: center;
+  padding:34rpx 0;
+  color:#494a4e;
+
+}
+.taici{
+  background-color: #f4f4f4;
+  font-size: 30rpx;
+  padding:30rpx 20rpx;
+  color:#494a4e;
+  line-height: 50rpx;
+}
+.taici .wxParse-div view{
+  width: 100%;
+  text-indent: 50rpx;
+  display: inline-block;
+}
+.taici .wxParse-div view:first-child{
+  width: 100%;
+  text-indent: 0rpx;
+  display: inline-block;
+}
+.mingtan{
+  text-align: center;
+  padding:30rpx 0;
+  border-top:1px solid #494a4e;
+  border-bottom: 1px solid #494a4e;
+}
+.mingdana{
+  margin-top: 28rpx;
+}
+.jiangHa{
+  font-size: 36rpx;
+  height: 120rpx;
+  border-bottom: 1px solid #e3e3e3;
+  padding-left: 36rpx;
+  font-weight: bold;
+}
+.img-ji{
+  width: 45rpx;
+  margin-right: 16rpx;
+}
+.jiangxianga{
+  width: 180rpx;
+  height: 180rpx;
+border-radius: 10rpx;
+  margin-right: 25rpx;
+}
+.imgall{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
+.yi-jiang{
+  padding:31rpx 36rpx;
+  border-bottom: 1px solid #e3e3e3;
+}
+.yi-left{
+  flex:1;
+   -webkit-flex:1;
+}
+.yi-conten{
+  line-height: 35rpx;
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+}
+.zhoudaoren{
+  margin-top: 14rpx;
+  margin-bottom: 14rpx;
+}
+.time-top{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.houjia{
+  margin-bottom: 20rpx;
+}

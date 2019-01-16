@@ -1,0 +1,51 @@
+/* Cultrue/post/post.wxss */
+.img{
+  width: 118rpx;
+}
+.outer{
+  margin-top: 20rpx;
+}
+input{
+  border-bottom: 1px solid #e3e3e3;
+  height: 85rpx;
+  line-height: 85rpx;
+}
+.lihaile{
+  font-size: 30rpx;
+  color:#bfbfbf;
+}
+textarea{
+  width: 98%;
+  padding-top:2%;
+  border-bottom: 1px solid #e3e3e3;
+}
+.button{
+  width: 162rpx;
+  height: 71rpx;
+  color:#fff;
+  border:none;
+  background-color: #ff5a5f;
+  line-height: 71rpx;
+  text-align: center;
+  float: right;
+  margin:0;
+}
+.last{
+  padding: 0 4%;
+  height: 164rpx;
+}
+.img-la{
+ width:118rpx;
+height: 118rpx;
+margin-right: 20rpx;
+}
+.out{
+  padding-left: 10rpx;
+}
+.changAn{
+  text-align: left;
+  text-indent: 10rpx;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+  color: #bfbfbf;
+}

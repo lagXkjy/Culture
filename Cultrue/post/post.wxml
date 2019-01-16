@@ -1,0 +1,19 @@
+<!--Cultrue/post/post.wxml-->
+<form bindsubmit="formSubmit" >
+<view class='bg-fff outer'>
+  <view class='out'><input name="title" maxlength='25' placeholder-class='lihaile' placeholder='标题，4-25个字'></input>
+  </view>
+  <view class='out'><textarea name="content"  maxlength='2000' placeholder-class='lihaile' placeholder='内容，10-2000个字'></textarea>
+  </view>
+  <view class='flex last between centerH'>
+  <view class='flex'>
+  <image  bindlongtap="longTap" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:for="{{list}}" data-id='{{index}}' wx:if="{{index<3}}" class='img-la' src='{{item}}'></image>
+    <image hidden='{{ISSPEC}}' bindtap='chooseimg' class='img' mode='widthFix' src='../../images/addimg_03.png'></image>
+    </view>
+    <button formType="submit" class='button'>发表</button>
+  </view>
+</view>
+
+</form>
+<loading hidden="{{hidden}}"></loading>
+<view class='changAn'>长按删除图片</view>

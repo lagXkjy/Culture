@@ -1,0 +1,87 @@
+<!--Cultrue/CommentDetail/CommentDetail.wxml-->
+<view class='outer bg-fff'>
+  <view class='fon-36'>{{list.data.title}}</view>
+  <view class='fon-26 AllHui name borderBbottom'><text class='time-top'>{{list.data.CreateTime}}</text> 文章作者：{{list.writer}}</view>
+  <view>
+  <image wx:if="{{list.data.Imgs!=''}}" wx:for="{{list.data.Imgs}}"  wx:for-item="j"  class='img-top' mode='widthFix'src='{{url}}{{j}}'></image>
+  </view>
+  <view class='fon-32 comMiddle contentColor'>
+    {{list.data.Content}}
+  </view>
+</view>
+
+ <view class='flex LUNP bg-fff  fon-32 centerH'>
+    <view class='gunL'></view>
+    全部评论
+</view>
+<!--评论  -->
+<view hidden='{{ISLun}}' class='PINGAll '>
+    <view  class=' DaiPinLun bg-fff fon-28'>
+      期待您的评论
+    </view>
+</view>
+<!--  -->
+<view hidden='{{!ISLun}}' class='PINGAll'>
+    <view class=' pinglunCon'>
+   
+      <view wx:for="{{LIST}}" class='flex bg-fff LunNeiRon'>
+        <view>
+          <image class='imgtou'mode="widthFix" src='{{item.Headurl}}'>
+          </image>
+        </view>
+        <view class='left-ping'>
+          <view class='flex BtnCen'>
+            <view class='fon-28 Q7777'>{{item.NickName}}</view>
+            <view class='fon-24 bbb'>{{index+1}}楼</view>
+          </view>
+          <view  class='pinneirong fon-30'>{{item.Massage}}</view>
+          <view class='flex BtnCen'>
+            <view class='fon-24 bbb '>{{item.SendTime}}</view>
+            <view><image bindtap='HuiFuPinLun' data-id='{{item.ID}}'  class='img-pin' mode='widthFix' src='../../images/lun_11.png'></image></view>
+          </view>
+           <view class='ZhuiPin'>
+           <view wx:if="{{item.carts!=''}}" class='sanJIao'></view>
+           <!-- 循环开始 -->
+                <view wx:for="{{item.carts}}" wx:if="{{item.carts!=''}}" wx:for-item="j" class='ZhuiPin-view flex'>
+                  <view class='nameP'>{{j.NickName}}</view>
+                  <view class='XianZhiTh'>:{{j.Massage}}</view>
+                </view>
+            <!-- 结束-->
+           </view>
+        </view>
+       </view>
+    </view>
+    <view wx:if="{{JiaShow}}" class='center JiaZaiZ'>
+  <image class='img-oo'  src='../../images/5-121204193R0-50.gif'></image>
+   加载中
+</view>
+
+<view wx:if="{{All}}" class='center JiaZaiZ'>已经加载全部了</view>
+</view>
+
+<form>
+  <view class='footer bg-fff'>
+    <view class=' centerH dingwei flex'>
+      <image class='write' src='../../images/write_15.png' mode='widthFix'></image>
+      <input type='text' maxlength='2000' bindinput="inputValue" name="content" placeholder-class='footer-pin fon-28' value='{{kong}}' placeholder='写评论'></input>
+      <text bindtap='submit' class='fasong footer-pin fon-28'>发送</text>
+    </view>
+  </view>
+</form>
+
+
+<view hidden='{{HuiFu}}' class='model-B'>
+    <view class='kuangJia'>
+          <view>评论</view>
+          <view>
+            <textarea bindinput="areaValue" value='{{kong1}}' maxlength='2000' placeholder-class='footer-pin fon-28'  placeholder='输入评论内容'></textarea>
+          </view>
+          <view bindtap='TiJiao'>
+            确认提交
+          </view>
+    </view>
+    <view bindtap='ClanMode' style='text-align:center;'>
+      <icon type='cancel' color='#fff' size="30"></icon>
+    </view>
+</view>
+

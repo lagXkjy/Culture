@@ -1,0 +1,33 @@
+<!--Cultrue/bar/bar.wxml-->
+<view>
+  <view class='img-all center'> 
+    <view mode='center' class='img ' style='background:url({{bgimg}}) no-repeat;background-size:100% 100%'>
+      <view class='huisea center'>
+        <view class='DOUjiu'>斗酒文章</view>
+      </view>
+    </view>
+  </view>
+
+   <view class='img-all center'> 
+    <view mode='center' class='img ' style='background:url({{bgimg1}}) no-repeat;background-size:100% 100%'>
+      <view class='huisea center'>
+        <view class='DOUjiu'>杯中乾坤</view>
+      </view>
+    </view>
+  </view>
+
+ <view class='img-all center'> 
+    <view mode='center' class='img ' style='background:url({{bgimg2}}) no-repeat;background-size:100% 100%'>
+      <view class='huisea center'>
+        <view class='DOUjiu'>一品天下</view>
+      </view>
+    </view>
+  </view>
+   <view class='img-all center'> 
+    <view mode='center' class='img ' style='background:url({{bgimg3}}) no-repeat;background-size:100% 100%'>
+      <view class='huisea center'>
+        <view class='DOUjiu'>酒觅性情</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,167 @@
+/* Cultrue/CommentDetail/CommentDetail.wxss */
+
+.outer{
+  padding: 39rpx 32rpx 0 32rpx;
+}
+.name{
+  padding-top: 30rpx;
+  margin-bottom: 30rpx;
+  border-bottom:1px solid #e3e3e3;
+  padding-bottom: 30rpx;
+}
+.img-top{
+  width: 100%;
+  margin-bottom: 25rpx;
+}
+
+.time-top{
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.gunL{
+  background-color: #ff5a5f;
+  width: 10rpx;
+  height: 55rpx;
+  margin-right: 10rpx;
+}
+.LUNP{
+  font-weight: bold;
+  margin-top: 25rpx;
+  border-bottom: 1px solid #e3e3e3;
+  height: 83rpx;
+}
+.imgtou{
+  border-radius: 50%;
+  width: 70rpx;
+  margin-right: 20rpx;
+}
+.img-pin{
+  width: 32rpx;
+}
+.left-ping{
+  flex:1;
+}
+.pinneirong{
+  margin-top: 25rpx;
+  margin-bottom: 20rpx;
+}
+.comMiddle{
+  padding-bottom: 50rpx;
+}
+.PINGAll{
+  padding-bottom: 100rpx;
+}
+.footer{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 94rpx;
+}
+.footer input{
+  flex: 5;
+  -webkit-flex: 5;
+  height: 60rpx;
+  border-bottom: 1px solid #e3e3e3;
+  padding-left: 60rpx;
+}
+.footer-pin{
+  color:#9f9f9f;
+}
+.fasong{
+  text-align: right;
+  display: block;
+  height: 100%;
+  line-height: 100rpx;
+}
+.dingwei{
+  position: relative;
+  height: 94rpx;
+  padding: 0 22rpx 0 22rpx;
+}
+.write{
+  width: 29rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 33rpx;
+}
+.ZhuiPin{
+  width: 100%;
+  background-color: #ebebeb;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.ZhuiPin-view{
+ font-size: 26rpx;
+ padding:30rpx 30rpx;
+ border-bottom: 1rpx solid #e3e3e3;
+}
+.ZhuiPin .ZhuiPin-view:last-child{
+  border-bottom: none;
+}
+.ZhuiPin .nameP{
+  color:#4d638d;
+}
+.sanJIao{
+    width: 0;
+    height: 0;
+    border-left: 12rpx solid transparent;
+    border-right: 12rpx solid transparent;
+    border-bottom: 16rpx solid #ebebeb;
+    position: absolute;
+    left: 30rpx;
+    top: -16rpx;
+}
+.model-B{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7)
+}
+.kuangJia{
+  width: 564rpx;
+  margin:117rpx auto;
+  height: 354rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.kuangJia view textarea{
+  width: 461rpx;
+  height: 128rpx;
+  margin: 35rpx auto;
+  border:1px solid #d2d3d5;
+  margin-top: 0;
+  padding: 0 15rpx;
+}
+.kuangJia view:first-child{
+  text-align: center;
+  font-size: 34rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.kuangJia view:last-child{
+  text-align: center;
+  font-size: 35rpx;
+  color:#18787f;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1px solid #d2d3d5;
+}
+.DaiPinLun{
+  text-indent: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.LunNeiRon{
+  margin-bottom: 20rpx;
+  padding:22rpx 35rpx; 
+  border-bottom: 1px solid #e3e3e3;
+}
+.pinglunCon .LunNeiRon:last-child{
+  margin-bottom: 0;
+}

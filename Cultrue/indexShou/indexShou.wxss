@@ -1,0 +1,162 @@
+/* Cultrue/indexShou/indexShou.wxss */
+.navbar{ 
+ flex: none; 
+ display: flex; 
+  /* width: 1000px; */
+ -webkit-flex: none; 
+ display: -webkit-flex; 
+ background: #fff; 
+ font-size: 30rpx;
+position: relative;
+/* padding-right: 15%; */
+} 
+.navbar .item{
+ width: 15%;
+ position: relative; 
+ flex: auto; 
+
+ -webkit-flex: auto; 
+ text-align: center; 
+ line-height: 80rpx; 
+} 
+.middle-left{
+  flex: 1;
+}
+.Bg_tou{
+  padding-top: 82rpx;
+}
+.ER{
+  padding-top: 1rpx;
+}
+.scroll{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+.navbar .dingwei{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 80rpx;
+  background-color: white;
+}
+.navbar .item.active{ 
+ color: #006b72; 
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: -1rpx; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #006b72; 
+}
+.image-top{
+  width: 42rpx;
+}
+.homesou{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  display: -webkit-flex;
+  -webkit-justify-content:center;
+  -webkit-align-items: center;
+  height: 100%;
+}
+.swiper{
+  margin-bottom: 20rpx;
+
+}
+.slide-image{
+  width: 100%;
+}
+.centerimg{
+  width: 183rpx;
+  height: 183rpx;
+  border-radius: 10rpx;
+}
+.middle-con{
+  padding: 20rpx 36rpx;
+  justify-content: space-between;
+  -webkit-justify-content:center;
+}
+.middle-left view{
+
+  margin-right: 15rpx;
+}
+.img-TuiJ{
+  width: 264rpx;
+  height: 158rpx;
+  justify-content: center;
+  -webkit-justify-content:center;
+   -webkit-align-items: center;
+  display: -webkit-flex;
+  align-items: center;
+  display: flex;
+}
+.middle-left-T{
+  padding:21rpx 0 21rpx 36rpx;
+  flex: 1;
+  -webkit-flex: 1;
+}
+.middle-left-T view:first-child{
+  height: 80rpx;
+  margin-bottom: 10rpx;
+  line-height: 40rpx;
+}
+.TuiJian{
+  margin-top: 20rpx;
+  border-top:1px solid #e3e3e3;
+}
+.music{
+  width: 60rpx;
+  height: 60rpx;
+  border:1px solid #fff;
+  border-radius: 50%;
+}
+.LangSon-bg{
+  height: 388rpx;
+  border-radius: 10rpx;
+}
+.LiangSong{
+  padding:0 36rpx;
+  padding-top: 47rpx;
+}
+.music-L{
+  width: 119rpx;
+  height: 119rpx;
+}
+.smallimg{
+  width: 27rpx;
+}
+.LangjieGou{
+  justify-content: space-between;
+  -webkit-justify-content:space-between;
+  padding-bottom: 20rpx;
+}
+.commentaries view{
+  margin-left: 10rpx;
+}
+.commentaries view:nth-child(2){
+  margin-right: 20rpx;
+}
+.title-L{
+  margin: 30rpx 0;
+}
+.zhongjian-hou{
+  line-height: 40rpx;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+}
+.ing-view{
+  width: 183rpx;
+  height: 183rpx;
+}
+.input{
+  border:1px solid #e3e3e3;
+  width: 200rpx;
+}

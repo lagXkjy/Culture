@@ -1,0 +1,83 @@
+/* pages/Tixian/Tixian.wxss */
+page{
+  overflow: hidden;
+  -webkit-overflow: hidden;
+}
+.outer{
+ background-color: #fff;
+ width: 590rpx;
+ margin:auto;
+ margin-top: 27rpx;
+ padding:55rpx 0;
+ padding-right: 52rpx;
+ padding-left: 52rpx;
+
+}
+.flex{
+  display: flex;
+  display: -webkit-flex;
+  padding-bottom: 50rpx;
+  border-bottom: 1px solid #e3e3e3;
+}
+.jiner{
+  font-size: 32rpx;
+  margin-bottom: 40rpx;
+}
+
+.input{
+  font-size: 103rpx;
+  height: 103rpx;
+}
+.beiZhu{
+  display: flex;
+  display: -webkit-flex;
+  padding:20rpx 0;
+  height:44rpx;
+  line-height: 55rpx;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 30rpx;
+  padding-top: 15rpx;
+}
+.input2{
+  padding-left: 20rpx;
+  height: 44rpx;
+  font-size: 30rpx;
+}
+.tishi{
+  font-size: 25rpx;
+  color:#868686;
+  margin-top: 38rpx;
+  margin-bottom: 46rpx;
+}
+.fon-36{
+  font-size: 36rpx;
+  margin-bottom: 44rpx;
+}
+.footer{
+  text-align: center;
+  font-size: 30rpx;
+  color:#18787f;
+}
+.beiuCla{
+  font-size: 50rpx;
+   color:#868686;
+}
+.renmingbi{
+  width: 35rpx;
+  margin-right: 15rpx;
+}
+.beihzua{
+  font-size: 30rpx;
+  color:#868686;
+  text-indent: 55rpx;
+}
+.qianB{
+  font-size: 62rpx;
+  margin-right: 15rpx;
+}
+.bg-hongse{
+  background-color: #ff5a5f;
+  width: 584rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}

@@ -1,0 +1,88 @@
+<!--Cultrue/Eventdetails/Eventdetails.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class='outer'>
+  
+  <view class='fon-48'>{{list.ActivityTitle}}</view>
+  <view class='fon-30 Bb8687 time-top'>{{list.ActiveDate}}</view>
+  <view>
+    <image class='img-top' mode='widthFix' src='{{url}}{{list.ActiveImage}}'></image>
+  </view>
+  <view class='fon-32 contentColor content'>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <view class='centerall'>
+    <view>
+      <image  class='toxiang' src='{{url}}{{list.PeoplePhotos}}'></image>
+    </view>
+    <view class='fon-36 zhoudaoren'>{{list.PresideOver}}</view>
+    <view class='fon-26 AllHui'>{{list.Location}}</view>
+  </view>
+  <view class='taici'>
+   <template is="wxParse" data="{{wxParseData:article1.nodes}}"/>
+  </view>
+</view>
+
+<view wx:if="{{arry.length!=0}}" class='mingtan'>
+  <view class='fon-36'>{{list.bearthepalm}}</view>
+  <view class='fon-30 mingdana Bb8687'>获奖名单</view>
+</view>
+<!--  -->
+<view class='houjia'>
+
+<view wx:if="{{num1!=0}}" class='jiangHa centerH'>
+  <image class='img-ji' mode='widthFix' src='../../images/yidengjiang_06.png'></image>
+  一等奖
+</view>
+
+<view wx:for="{{arry}}" bindtap='QUKanJiang' data-id='{{item.ID}}' wx:if="{{item.WinType==1001}}" class='yi-jiang flex'>
+  <view class='centerH jiangxianga'><image class='imgall' mode='center' src='{{url}}{{item.ListImg}}'></image></view>
+  <view class='yi-left'>
+    <view class='fon-32'>{{item.Title}}</view>
+    <view class='fon-26 yi-conten XianZhi'>{{item.FirstField}}</view>
+    <view class='fon-26'>文/{{item.Writer}}</view>
+  </view>
+</view>
+
+<view wx:if="{{num2!=0}}" class='jiangHa centerH'>
+  <image class='img-ji' mode='widthFix' src='../../images/erdengjian_10.png'></image>
+  二等奖
+</view>
+
+<view wx:for="{{arry}}" bindtap='QUKanJiang' data-id='{{item.ID}}' wx:if="{{item.WinType==1002}}" class='yi-jiang flex'>
+  <view class='centerH jiangxianga'><image class='imgall' mode='center' src='{{url}}{{item.ListImg}}'></image></view>
+  <view class='yi-left'>
+    <view class='fon-32'>{{item.Title}}</view>
+    <view class='fon-26 yi-conten XianZhi'>{{item.FirstField}}</view>
+    <view class='fon-26'>文/{{item.Writer}}</view>
+  </view>
+</view>
+
+<view wx:if="{{num3!=0}}" class='jiangHa centerH'>
+  <image class='img-ji' mode='widthFix' src='../../images/erdengjian_10.png'></image>
+  三等奖
+</view>
+
+<view wx:for="{{arry}}" bindtap='QUKanJiang' data-id='{{item.ID}}' wx:if="{{item.WinType==1003}}" class='yi-jiang flex'>
+  <view class='centerH jiangxianga'><image class='imgall' mode='center' src='{{url}}{{item.ListImg}}'></image></view>
+  <view class='yi-left'>
+    <view class='fon-32'>{{item.Title}}</view>
+    <view class='fon-26 yi-conten XianZhi'>{{item.FirstField}}</view>
+    <view class='fon-26'>文/{{item.Writer}}</view>
+  </view>
+</view>
+
+<view wx:if="{{num4!=0}}" class='jiangHa centerH'>
+  优秀奖
+</view>
+
+<view wx:for="{{arry}}" bindtap='QUKanJiang' data-id='{{item.ID}}' wx:if="{{item.WinType==1004}}" class='yi-jiang flex'>
+  <view class='centerH jiangxianga'><image class='imgall' mode='center' src='{{url}}{{item.ListImg}}'></image></view>
+  <view class='yi-left'>
+    <view class='fon-32'>{{item.Title}}</view>
+    <view class='fon-26 yi-conten XianZhi'>{{item.FirstField}}</view>
+    <view class='fon-26'>文/{{item.Writer}}</view>
+  </view>
+</view>
+
+
+</view>

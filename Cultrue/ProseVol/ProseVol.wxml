@@ -1,0 +1,8 @@
+<!--Cultrue/ProseVol/ProseVol.wxml-->
+<view class='top fon-36 bg-fff'>
+  {{title}}
+</view>
+
+<view class='last fon-32 bg-fff'>
+  {{content}}
+</view>

@@ -1,0 +1,43 @@
+/* Cultrue/rule/rule.wxss */
+.usermotto{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.middle{
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  display: -webkit-flex;
+  font-size: 30rpx;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  border-bottom:1px solid #ccc;
+}
+.usermotto .middle:nth-child(1){
+  border-top:1px solid #ccc;
+}
+.left{
+  display: -webkit-flex;
+    display: flex;
+    width: 80%;
+}
+.img-left{
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content:center;
+  width: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.dian{
+  height: 10rpx;
+  width: 10rpx;
+  border-radius: 50%;
+  background-color: #bc1926;
+  margin-left: 10rpx;
+}
+.ton-img{
+  width: 20rpx;
+  margin-right: 30rpx;
+}

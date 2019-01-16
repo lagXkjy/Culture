@@ -1,0 +1,12 @@
+<!--Cultrue/Readaloud/Readaloud.wxml-->
+<view class='bg-outer'>
+  <view bindtap='LianJie' data-id='{{item.ID}}' wx:for="{{list}}" class='flex outer bg-fff'>
+    <view>
+      <image  class='img' src='{{url}}{{item.images}}'></image>
+    </view>
+    <view class='right'>
+      <view class='right-top fon-36'>{{item.Name}}{{item.IsGroupLeader==1?'(组长)':''}}</view>
+      <view class='fon-30 XianZhi AllHui'>{{item.AuthorDes}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--Cultrue/rule/rule.wxml-->
+ <view class="usermotto">
+    <view wx:for="{{arry}}" bindtap="GpoTp" data-id="{{item.ID}}" class="middle bg-fff" hidden='{{item.display}}' >
+        <view class="left">
+          <view class="img-left center">
+            <view class='dian'></view>
+          </view>
+          <view  class="centera"> {{item.title}}</view>
+        </view>
+        <view class="sepcal center">
+     
+       <image mode="widthFix" class="ton-img" src="{{Img}}"></image>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,66 @@
+/* Cultrue/Mycollection/Mycollection.wxss */
+.imgall{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+}
+.top{
+  height: 20rpx;
+  border-bottom: 1px solid #e3e3e3;
+}
+.yuan{
+  height: 28rpx;
+  width: 28rpx;
+  border:1px solid #ccc;
+  border-radius: 50%;
+}
+.content{
+  padding:33rpx 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e3e3e3;
+}
+.xuanze{
+  width: 100rpx;
+}
+.content-all{
+  margin-right: 20rpx;
+  width: 56%;
+}
+.content-all view:nth-child(2){
+  color:#888888;
+  margin-top: 10rpx;
+  margin-bottom: 15rpx;
+  line-height: 40rpx;
+}
+.content-all view:nth-child(3){
+  color:#888888;
+}
+.footer{
+  height: 105rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.yixuanze{
+  width: 70%;
+  background-color: #fff;
+  line-height: 105rpx;
+  color:#888888;
+  font-size: 30rpx;
+  text-indent: 36rpx;
+}
+.shanchu{
+background-color: #ff5a5f;
+width: 30%;
+line-height: 105rpx;
+text-align: center;
+color:#fff;
+}
+#bian{
+  color:#ff5a5f;
+}
+.outer{
+  padding-bottom: 105rpx;
+}

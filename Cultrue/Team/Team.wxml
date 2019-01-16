@@ -1,0 +1,22 @@
+<!--Cultrue/Team/Team.wxml-->
+<view bindtap='GouTo' data-id='{{item.ID}}' wx:for="{{list}}" class='flex outer'>
+  <view class='centerH left'>
+    <view>
+      <view class='left-top'>{{item.RoleName}}：<text class='text'>{{item.Name}}</text></view>
+      <view hidden='{{item.hidden}}' class='left-btn'>{{item.RoleDes}}</view>
+    </view>
+  </view>
+    <image mode='widthFix' class='z-img' src='{{imgurl}}{{item.images}}'></image>
+</view>
+
+<!--  -->
+
+<view class='pinglun'>
+  <view class='img-all center' wx:for="{{types}}" > 
+    <view mode='center' class='img ' style='background:url({{imgurl}}{{item.BackImg}}) no-repeat;background-size:100% 100%'>
+      <view class='huisea center' bindtap='toShowUser' data-id='{{item.ID}}'>
+        <view class='DOUjiu'>{{item.RoleName}}</view>
+      </view>
+    </view>
+  </view>
+</view>

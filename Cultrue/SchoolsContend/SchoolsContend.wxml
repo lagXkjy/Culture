@@ -1,0 +1,25 @@
+<!--Cultrue/SchoolsContend/SchoolsContend.wxml-->
+<view class='outer '>
+  <view wx:for="{{list}}" data-id='{{item.contend.ID}}' bindtap='GoTo' class='outer-one bg-fff borderBbottom'>
+    <view class='fon-36'>{{item.contend.title}}</view>
+    <view class='fon-26 AllHui title XianZhione'>{{item.contend.Content}}</view>
+    <view class='img'>
+      <image wx:if="{{item.contend.Imgs!=''}}" wx:for="{{item.contend.Imgs}}"  wx:for-item="j" mode='widthFix' src='{{url}}{{j}}'></image>
+    </view>
+    <view class='flex centerH pinglun'>
+      <view class='centerH'><image class='smallimg'  mode='widthFix' src='../../images/z-pin_07.png'></image></view>
+      <view class='fon-26 AllHui'>{{item.CartsNum}}</view>
+        <view class='xian'></view>
+      <view><image class='smallimg' mode='widthFix' src='../../images/liulan_10.png'></image></view>
+      <view class='fon-26 AllHui'>{{item.ReadNum}}</view>
+    </view>
+  </view>
+  <view wx:if="{{JiaShow}}" class='center JiaZaiZ'>
+  <image class='img-oo'  src='../../images/5-121204193R0-50.gif'></image>
+   加载中
+</view>
+  <view class='alle' hidden='{{Allcontent}}'>已经加载全部了</view>
+  
+</view>
+
+<view bindtap='GoToFaTie' class='fatie white'>发帖</view>

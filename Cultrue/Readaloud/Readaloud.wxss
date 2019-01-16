@@ -1,0 +1,22 @@
+/* Cultrue/Readaloud/Readaloud.wxss */
+.bg-outer{
+padding-top:20rpx;
+}
+.img{
+  width: 140rpx;
+  border-radius: 50%;
+  height: 140rpx;
+  margin-right: 47rpx;
+}
+.right{
+  flex: 1;
+  -webkit-flex: 1;
+}
+.outer{
+  padding: 28rpx 38rpx 28rpx 57rpx;
+  margin-bottom: 20rpx;
+}
+.right-top{
+  margin-bottom: 10rpx;
+  margin-top: 15rpx;
+}

@@ -1,0 +1,28 @@
+<!--Cultrue/activity/activity.wxml-->
+  <view class='outer-b'></view>
+
+
+
+
+
+  <!-- 开始 -->
+  <view wx:for="{{list}}" data-id='{{item.ID}}' bindtap='GoTo' class='flex outer bg-fff'>
+    <view >
+      <image class='img'  src='{{url}}{{item.ActiveImage}}'></image>
+    </view>
+    <view>
+      <view class='fon-32 XianZhione'>{{item.ActivityTitle}}</view>
+      <view class='fon-26 AllHui time'>{{item.ActiveDate}}</view>
+      <view class='fon-26 AllHui'>{{item.PresideOver}}</view>
+    </view>
+  </view>
+
+<!--结束  -->
+
+<view wx:if="{{JiaShow}}" class='center JiaZaiZ'>
+  <image class='img-oo'  src='../../images/5-121204193R0-50.gif'></image>
+   加载中
+</view>
+
+<view wx:if="{{All}}" class='center JiaZaiZ'>已经加载全部了</view>
+<view wx:if="{{ZanWu}}" class='center JiaZaiZ'>暂无数据</view>

@@ -1,0 +1,34 @@
+<!--Cultrue/Aboutpresent/Aboutpresent.wxml-->
+  <swiper autoplay="{{true}}" class='swiper' indicator-active-color="#fff" indicator-dots="{{true}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{url}}{{item}}" mode='widthFix' class="slide-image"/>
+    </swiper-item>
+  </block>
+  </swiper>
+
+  <view class='outer bg-fff'>
+    <view class='centerH top'>
+      <image mode='widthFix' class='imgs' src='../../images/zaichang_03.png'></image>
+      在场主义
+    </view>
+    <view class='fon-32 content'>
+        <view><text class='text'>创立时间：</text>正式创立于2008年3月8日</view>
+        <view><text class='text'>发起人：</text>由周闻道为首发起；由周伦佑建构散文理论。</view>
+        <view><text class='text'>主要成员：</text>首批主要成员有：周闻道、马叙、风吹阑叶、朴素、李云、米奇诺娃、杨沐、宋奔、张生全、张利文、沈荣均、周强、郑小琼、赵瑜、唐朝晖、黄海、傅菲、周伦佑等</view>
+        <view><text class='text'>主义宣言：</text></view>
+        <view>在场主义确认：“在场”就是去蔽，就是敞亮，就是本真；在场主义散文就是无遮蔽的散文，就是敞亮的散文，就是本真的散文。在场主义在致力于流派建设的同时，还自觉地肩负起了廓清中国散文的天空，为中国散文立论和立法（法则-尺度）的历史使命。
+在场主义的出现，是中国当代文学的又一个重大的开端性事件。具有改写中国三千年散文观念的重要意义。</view>
+    </view>
+  </view>
+
+
+  <view class='outer bg-fff'>
+    <view class='centerH top'>
+      <image mode='widthFix' class='imgs' src='../../images/zaichang_03.png'></image>
+      在场散文
+    </view>
+    <view class='fon-32 content'>
+        <view>“状态名词。特指当代文学中的在场主义散文写作及其文本呈现。“在场散文”视“在场”为显现的存在，或存在意义的显现；主张“面向事物本身”，强调经验的直接性、无遮蔽性和敞开性。认为散文写作“在场”的唯一路径是介入，介入就是“去蔽”、“揭示”和“展现”。“在场散文”所主张的介入包括：对作家主体的介入，对当下现实的介入，对人类个体生存处境的介入。认为只有通过对以上三个方面的介入，才能去除那些自称为真理的谎言、去除那些制度化语言、意识形态用语、公众意见对作家心灵的遮蔽、对人类个体生存处境的遮蔽、对当下现实的“真实”与“真相”的遮蔽，使散文之笔直接进入事物内部，与世界的原初经验接触，并通过本真语言呈现出来。在此意义上可以确认：“在场”就</view>
+  </view>
+  </view>

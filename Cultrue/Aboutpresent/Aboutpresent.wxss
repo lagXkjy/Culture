@@ -1,0 +1,29 @@
+/* Cultrue/Aboutpresent/Aboutpresent.wxss */
+.slide-image{
+  width: 100%;
+}
+.outer{
+  margin-top: 20rpx;
+}
+.imgs{
+  width: 34rpx;
+  margin-right: 17rpx;
+  margin-left: 25rpx;
+}
+.top{
+  height: 91rpx;
+  border-bottom: 1px solid #d3d3d3;
+  font-size: 36rpx;
+  color:#303641;
+}
+.content{
+  color:#494a4e;
+  padding:50rpx 35rpx;
+  line-height: 50rpx;
+}
+.text{
+  color:#929292;
+}
+.outer view{
+  margin-bottom: 10rpx;
+}

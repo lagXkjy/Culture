@@ -1,0 +1,24 @@
+/* Cultrue/bar/bar.wxss */
+.img-all{
+  width: 50%;
+float: left;
+margin-top: 50rpx;
+}
+.img{
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  color: white;
+}
+.DOUjiu{
+  font-size: 40rpx;
+  width: 120rpx;
+  font-weight: bold;
+}
+.huisea{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 1, 0.2);
+  border-radius: 10rpx;
+}

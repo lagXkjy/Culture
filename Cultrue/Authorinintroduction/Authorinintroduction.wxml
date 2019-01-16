@@ -1,0 +1,41 @@
+<!--Cultrue/Aboutpresent/Aboutpresent.wxml-->
+  <swiper autoplay="{{true}}" class='swiper' indicator-active-color="#fff" indicator-dots="{{true}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{url}}{{item}}" mode='widthFix' class="slide-image"/>
+    </swiper-item>
+  </block>
+  </swiper>
+
+
+ <view class='outer bg-fff'>
+    <view class=' centerH top'>
+     <text class='houjia'> {{da.Name}}  |  {{da.RoleName}}</text>  
+    </view>
+    <view class='fon-32 content' style='text-indent:1em;'>
+      {{da.AuthorDes}}
+     </view>
+  </view>
+
+  <view class='outer bg-fff'>
+    <view class='centerH top'>
+      <image mode='widthFix' class='imgs' src='../../images/zaichang_03.png'></image>
+      作品简览
+    </view>
+    <view class='fon-32 content' >
+      {{da.ProductionDes}}
+     </view>
+  </view>
+
+
+  <view class='outer bg-fff'>
+    <view class='centerH top'>
+      <image mode='widthFix' class='imgs' src='../../images/jiangbei_03.png'></image>
+      荣誉业绩
+    </view>
+    <view class='fon-32 content'>
+        <view style='text-indent:0.5em;'>
+           {{da.GloryDes}}
+        </view>
+  </view>
+  </view>

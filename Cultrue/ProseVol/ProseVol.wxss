@@ -1,0 +1,11 @@
+/* Cultrue/ProseVol/ProseVol.wxss */
+.last,.top{
+  padding: 32rpx 36rpx;
+}
+.top{
+  margin-bottom: 25rpx;
+}
+.last{
+  color:#494a4e;
+  line-height: 45rpx;
+}

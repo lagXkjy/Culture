@@ -1,0 +1,87 @@
+<!--Cultrue/indexShou/indexShou.wxml-->
+
+<scroll-view class='scroll' scroll-x="true" style="height: 82rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" >
+<view class="navbar">
+  <view wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}
+  </view>
+</view>
+ </scroll-view>
+
+<!--作品  -->
+<view  class='Bg_tou' hidden="{{currentTab!==0}}">
+<!--头  -->
+  <swiper autoplay="{{true}}" class='swiper' indicator-active-color="#fff" indicator-dots="{{true}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}" >
+    <swiper-item>
+      <image src="{{url}}{{item}}" mode='widthFix' class="slide-image"/>
+    </swiper-item>
+  </block>
+  </swiper>
+  <!--轮播图结束  -->
+  <view class='bg-fff'>
+    <view bindtap='GoToNew' data-id='{{item.Article.ID}}'  wx:for="{{list}}" wx:key="{{index}}" class='flex middle-con borderBbottom'>
+        <view class='middle-left'>
+              <view class='fon-32 XianZhione'>{{item.Article.Title}}</view>
+              <view class='fon-26 AllHui zhongjian-hou XianZhi'>{{item.Article.FirstField}}</view>
+              <view class='fon-24 AllHui'>文/{{item.Article.Editor}}</view>
+        </view>
+        <view class=' ing-view' >
+          <image class='centerimg' mode='center' src='{{url}}{{item.Article.ListImg}}'></image>
+        </view>
+    </view>
+  </view>
+  <!--尾  -->
+</view>
+
+<!-- 推荐 -->
+<view  class='Bg_tou' hidden="{{currentTab!==1}}">
+  <view class='ER'>
+    <view bindtap='GoToNew' data-id='{{item.Article.ID}}' wx:key="{{index}}" wx:for="{{list}}" class='flex TuiJian between bg-fff'>
+      <view class='middle-left-T'>
+        <view class='fon-32 XianZhi'>{{item.Article.Title}}</view>
+        <view class='fon-26 AllHui'>文/{{item.Article.Editor}} 阅读 {{item.ReadNum}}</view>
+      </view>
+      <view class='img-TuiJ' style='background:url({{url}}{{item.Article.ListImg}}) no-repeat;background-size:100% 100%'>
+          <image hidden='{{!item.IsViVo}}' class='music' src='../../images/music_06.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--朗诵  -->
+<view  class='  Bg_tou'  hidden="{{currentTab!==2}}">
+
+  <view class='LiangSong bg-fff' wx:for="{{list}}" wx:key="{{index}}">
+    <view data-id='{{item.Article.ID}}' bindtap='GoToNew'  class='LangSon-bg center' style='background:url({{url}}{{item.Article.VoiceImg}}) no-repeat;background-size:100% 100%'>
+      <image  class='music music-L' src='../../images/musicB_03.png'></image>
+    </view>
+
+    <view class='fon-36 title-L XianZhione'>{{item.Article.Title}}</view>
+
+    <view class='flex LangjieGou '>
+        <view class='fon-26 AllHui'>{{item.Article.Editor}}</view>
+
+        <view class='flex centerH commentaries'>
+          <view>
+            <image class='smallimg' mode='widthFix' src='../../images/dianzan_03.png'></image>
+          </view>
+          <view class='fon-26 AllHui'>{{item.LikeNum}}</view>
+        
+          <view>
+            <image class='smallimg' mode='widthFix' src='../../images/pinglun_06.png'></image>
+          </view>
+          <view class='fon-26 AllHui'>{{item.PlNum}}</view>
+        </view>
+
+      </view>
+  </view>
+
+</view>
+
+<view wx:if="{{JiaShow}}" class='center JiaZaiZ'>
+  <image class='img-oo'  src='../../images/5-121204193R0-50.gif'></image>
+   加载中
+</view>
+
+<view wx:if="{{All}}" class='center JiaZaiZ'>已经加载全部了</view>
+<view wx:if="{{ZanWu}}" class='center JiaZaiZ'>暂无数据</view>

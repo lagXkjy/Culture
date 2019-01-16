@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "Cultrue/indexShou/indexShou",
+    "Cultrue/index/index",
+    "Cultrue/ReadDetail/ReadDetail",
+    "Cultrue/demo/demo",
+    "Cultrue/Tixian/Tixian",
+    "Cultrue/shouru/shouru",
+    "Cultrue/ProseVol/ProseVol",
+    "Cultrue/rule/rule",
+    "Cultrue/Readaloud/Readaloud",
+    "Cultrue/Authorinintroduction/Authorinintroduction",
+    "Cultrue/Team/Team",
+    "Cultrue/Aboutpresent/Aboutpresent",
+    "Cultrue/Eventdetails/Eventdetails",
+    "Cultrue/activity/activity",
+    "Cultrue/bar/bar",
+    "Cultrue/CommentDetail/CommentDetail",
+    "Cultrue/post/post",
+    "Cultrue/SchoolsContend/SchoolsContend",
+   
+    "pages/index/index",
+    "pages/logs/logs",
+    "Cultrue/Mycollection/Mycollection"
+ 
+  ],
+  "window": {
+    "backgroundTextStyle": "#fff",
+    "navigationBarBackgroundColor": "#18787f",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#b3b3b3",
+    "selectedColor": "#278188",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "Cultrue/indexShou/indexShou",
+        "text": "首页",
+        "iconPath": "images/index_16.png",
+        "selectedIconPath": "images/slecindex_03.png"
+      },
+      {
+        "pagePath": "Cultrue/activity/activity",
+        "text": "活动",
+        "iconPath": "images/huoDong_16.png",
+        "selectedIconPath": "images/activity_03.png"
+      },
+      {
+        "pagePath": "Cultrue/Mycollection/Mycollection",
+        "text": "收藏",
+        "iconPath": "images/ShouCang_16.png",
+        "selectedIconPath": "images/ShouCang_18.png"
+      },
+      {
+        "pagePath": "Cultrue/index/index",
+        "text": "我",
+        "iconPath": "images/meicon_05.png",
+        "selectedIconPath": "images/me_16.png"
+      }
+    ]
+  }
+}
